@@ -48,23 +48,21 @@ async function renderMovies(filter=null) {
         } else if (filter == 'RELASE_DATE_ASC') {
             
 
-            console.log(movieData.results);
-
             movieData.results.sort((a,b) => {return a.release_date.localeCompare(b.release_date)})
 
 
         } else if (filter == 'RELASE_DATE_DSC') {
             filtered_array = movieData.results;
 
-            filtered_array.sort((a,b) => {return b.release_date.localeCompare(a.release_date)})
+            movieData.results.sort((a,b) => {return b.release_date.localeCompare(a.release_date)})
 
-            // movieData.results = filtered_array
+            
         } else if (filter == 'ALPHABETICAL') {
             filtered_array = movieData.results;
 
-            filtered_array.sort((a,b) => {return a.title.localeCompare(b.title)})
+            movieData.results.sort((a,b) => {return a.title.localeCompare(b.title)})
 
-            // movieData.results = filtered_array
+           
         }
         
         
