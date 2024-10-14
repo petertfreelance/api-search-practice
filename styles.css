@@ -297,3 +297,9 @@ nav {
     width: 50%;
   }
 }
+
+/* sort filter */
+.filter-container {
+  padding: 20px;
+  text-align: right;
+}

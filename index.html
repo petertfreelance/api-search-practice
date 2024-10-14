@@ -50,12 +50,15 @@
           </header>
     </section>
     <div class="row">
-      <!-- <select name="" id="filter" onchange="filterMovies(event)">
-        <option value="" disabled selected>Sort</option>
-        <option value="RELASE_DATE_ASC">Oldest Release</option>
-        <option value="RELASE_DATE_DSC">Latest Release</option>
-        <option value="RATING">Rating</option>
-      </select> -->
+      <div class="filter-container">
+        <span>Sort By: </span>
+        <select name="" id="filter" onchange="renderMovies(event)">
+          <option value="" disabled selected>Sort</option>
+          <option value="RELASE_DATE_ASC">Oldest Release</option>
+          <option value="RELASE_DATE_DSC">Latest Release</option>
+          <option value="ALPHABETICAL">A - Z</option>
+        </select>
+      </div>
       <div class="shop-container movies__loading" id="shop">
         <i class="fas fa-spinner movies__loading-spinner"></i>
         
