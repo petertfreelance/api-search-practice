@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+.container {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 1200px;
+}
+  
+p {
+    font-size: 14px;
+    word-break: break-word;
+}
+  
+.hidden {
+    display: none;
+}
+  
+a {
+    text-decoration: none;
+}
+  
+button {
+    cursor: pointer;
+}
+
+input, textarea {
+    width: 100%;
+    background-color: #242424;
+    color: #fff;
+    outline: none;
+    border: 3px solid #c0c4cc;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    height: 40px;
+    transition: all 300ms ease;
+}
+input:hover, textarea:hover {
+    border-color: #dcdfe6;
+}
+  
+input:focus, textarea:focus {
+    border-color: #f06449;
+}
+  
+.container {
+    padding: 50px 0;
+    width: 100%;
+}
+  
+.row {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+#landing-page {
+    min-height: 100vh;
+}
+
+/* 
+header styling
+*/
+
+#top {
+    background: bottom url(./assets/movie-bg.jpg) no-repeat;
+    min-height: 500px;
+    background-size: cover;
+    position: relative;
+}
+.overlay {
+    background-color: rgba(0,0,0,0.2);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+  
+.header {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,25%);
+    width: 100%;
+    max-width: 1000px;
+    min-height: 300px;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title {
+    font-size: 60px;
+    margin-bottom: 12px;
+    text-align: left;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+  }
+
+
+/* 
+
+  NAVIGATION 
+  
+*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100px;
+
+  }
+  
+  #personal-logo {
+    width: 50px;
+    height: 50px;
+    filter: invert(1);
+    z-index: 1;
+  }
+  
+  .nav__link--list {
+    display: flex;
+    z-index: 1;
+  }
+  
+  .nav__link {
+    margin: 0 12px;
+  }
+  
+  .nav__link--anchor {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+    transition-property: color;
+    transition-duration: 2s;
+  }
+
+  .nav__link--anchor:hover {
+    color: #000;
+    transition-property: color;
+    transition-duration: 2s;
+  }
+  
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 15px auto;
+    padding: 0 15px;
+    position: relative;
+  }
+  .search-container::after {
+    content: '\f002';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+    top: 30%;
+    right: 7%;
+    font-size: 18px;
+  }
+  .search-container .search-input {
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 500px;
+  }
+  .search-container .search-input::placeholder {
+    color: rgb(244, 244, 244);
+  }
+
+
+/* main Content */
+
+.movies__loading-spinner {
+  display: none !important;
+}
+.movies__loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  font-size: 60px;
+  color: #7342d6;
+}
+.movies__loading .movies__loading-spinner {
+  display: block !important;
+}
+
+.fa-spinner {
+  animation: rotate 600ms infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* movies */
+
+.shop-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.movie {
+  width: 25%;
+  padding: 24px;
+}
+
+.movie__img {
+  max-height: 380px;
+  transition: all 300ms ease;
+  cursor: not-allowed;
+  /* Added after tutorial to maintain image aspect ratio */
+  object-fit: contain;
+  object-position: left;
+}
+
+.movie__img--wrapper {
+  margin-bottom: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+}
+
+.movie:hover .book__img {
+  transform: scale(1.03);
+}
+
+.movie__title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.movie__title:hover {
+  text-decoration: underline;
+  cursor: not-allowed;
+}
+
+.movie__ratings {
+  margin-bottom: 8px;
+  color: #fabf2a;
+}
+
+.movie__price--normal {
+  text-decoration: line-through;
+  padding-right: 6px;
+  color: #bfbfbf;
+}
+.movie__description {
+  margin-top: 10px
+}
+.movie__description .overview .more {
+  font-size: 0;
+  transition: font-size ease-out 1s;
+}
+
+.movie__description .overview.active .more {
+  font-size: inherit;
+  transition: font-size ease-out 1s;
+}
