@@ -246,6 +246,7 @@ nav {
   /* Added after tutorial to maintain image aspect ratio */
   object-fit: contain;
   object-position: left;
+  width: 100%;
 }
 
 .movie__img--wrapper {
@@ -255,7 +256,7 @@ nav {
   display: flex;
 }
 
-.movie:hover .book__img {
+.movie:hover .movie__img {
   transform: scale(1.03);
 }
 
@@ -290,4 +291,9 @@ nav {
 .movie__description .overview.active .more {
   font-size: inherit;
   transition: font-size ease-out 1s;
+}
+@media (max-width: 768px) {
+  .movie {
+    width: 50%;
+  }
 }
